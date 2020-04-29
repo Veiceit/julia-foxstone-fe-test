@@ -1,0 +1,26 @@
+.card-list{
+  @include clearlist;
+
+  > li{
+    display: flex;
+    justify-content: space-between;
+    min-height: 1em;
+    line-height: 1em;
+    box-sizing: content-box;
+    border-bottom: 1px solid #f1f6fa;
+    font-size: .875rem;
+    font-weight: 400;
+    padding: 13px 20px 10px;
+
+    > span:nth-child(2){
+      padding-left: 10px;
+      text-align: right;
+    }
+
+    &:first-child{
+      border-top: 1px solid #f1f6fa;
+    }
+  }
+}
+
+

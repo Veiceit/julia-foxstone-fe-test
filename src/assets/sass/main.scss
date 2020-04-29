@@ -1,0 +1,23 @@
+@import 'normalize-scss';
+@include normalize();
+@import "_variables";
+@import "_functions";
+@import "_mixins";
+@import "_typo";
+@import "_base";
+
+
+// components
+@import "components/card-list";
+@import "components/card-headline";
+
+@import "components/header";
+@import "components/main-nav";
+@import "components/headline";
+@import "components/user-nav";
+@import "components/offer-product";
+@import "components/btn";
+@import "components/footer";
+
+//pages
+@import "pages/home";

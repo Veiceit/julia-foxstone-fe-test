@@ -1,0 +1,48 @@
+html,
+body {
+  height: 100%;
+  overflow-x: hidden;
+}
+
+html {
+  box-sizing: border-box;
+  font-family: $font-family;
+  letter-spacing: .025em;
+  font-size: $font-size;
+
+  @include fluid-font(14px, 16px, 375px, 1440px, 16px, px);
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.content {
+  flex: 1 0 auto;
+  display: flex;
+}
+
+main{
+  flex: 0 0 82.5%;
+  margin-left: 17.5%;
+
+  @include max-w(1200px){
+    flex: 0 0 calc(100% - 50px);
+    margin-left: 50px;
+  }
+}
+
+.container {
+  width: 100%;
+  max-width: 1170px;
+  padding: 0 15px;
+  margin: 0 auto;
+}

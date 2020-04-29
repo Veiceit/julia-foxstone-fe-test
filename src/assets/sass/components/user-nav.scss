@@ -1,0 +1,69 @@
+.c-user-nav {
+  display: flex;
+
+  @include max-w(480px) {
+    width: 100%;
+    justify-content: space-evenly;
+  }
+
+  &__icon-box {
+    position: relative;
+    margin-right: 26px;
+    display: flex;
+    align-items: center;
+
+    &:last-child {
+      margin-right: 15px;
+    }
+  }
+
+  &__icon {
+    height: 1em;
+    display: inline-block;
+    padding-top: 3px;
+    cursor: pointer;
+
+    svg {
+      width: 16px;
+    }
+  }
+
+  &__notification {
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translate(50%, -45%);
+    background: #fc7c31;
+    z-index: 4;
+    padding: 2px;
+    font-size: .75rem;
+    color: $text-color-light;
+
+    @include max-w(768px) {
+      top: 10px;
+    }
+  }
+
+  &__user {
+    display: flex;
+    align-items: center;
+  }
+
+  &__user-photo {
+    border-radius: 50%;
+    width: 24px;
+  }
+
+  &__user-name {
+    margin: 0 .7em 0 1em;
+    color: #0c0034;
+  }
+
+  &__user-arrow {
+    width: 0;
+    height: 0;
+    border: 5px solid transparent;
+    border-top-color: #1e2b3b;
+    cursor: pointer;
+  }
+}

@@ -1,0 +1,22 @@
+.card-headline{
+  background: $bg-color;
+  text-align: center;
+  letter-spacing: 0.025em;
+  font-weight: 400;
+  padding: 10px 0;
+
+  &__title{
+    padding: 0 10px;
+    color: $text-color-light;
+    font-size: 1.125rem;
+    font-weight: 400;
+  }
+
+  &__sub-title{
+    color: #8799af;
+    margin: 8px 0 0;
+    font-size: .813rem;
+    font-weight: 100;
+    padding: 0 10px;
+  }
+}

@@ -1,0 +1,104 @@
+.c-main-nav{
+
+    &__list {
+        @include clearlist;
+    }
+
+    &__item{
+        line-height: 68px;
+        border-top: 1px solid #333f4f;
+        text-transform: uppercase;
+
+        @include max-w(1200px){
+            display: none;
+        }
+
+        &:last-child {
+            border-bottom: 1px solid #333f4f;
+        }
+
+        &.is-active{
+            background: #3b4f68;
+        }
+
+        &--open{
+            display: block;
+            cursor: pointer;
+
+            @include min-w(1201px){
+                display: none;
+            }
+
+            .c-main-nav__icon {
+                transform: rotate(180deg);
+            }
+        }
+    }
+
+    &__icon{
+        display: inline-block;
+        padding: 0 16px 0 26px;
+
+        @include max-w(1200px) {
+            padding: 0 15px;
+        }
+
+        svg{
+            width: 16px;
+            fill: #9dacbf;
+        }
+    }
+
+    &__text{
+
+        @include max-w(1200px) {
+            display: none;
+            padding-right: 15px;
+        }
+    }
+
+
+    &__link{
+        @include max-w(1200px) {
+            text-align: center;
+        }
+
+        &,
+        &:link,
+        &:visited{
+            color: $link-color;
+            line-height: inherit;
+            text-decoration: none;
+            display: inline-block;
+            width: 100%;
+        }
+
+        &:hover{
+            color: $link-color--hover;
+        }
+    }
+}
+
+.с-header.is-open{
+
+    .c-main-nav__item {
+        display: block;
+    }
+
+    .c-main-nav__link {
+         text-align: left;
+    }
+
+    .c-main-nav__text {
+        display: inline-block;
+    }
+
+    .c-main-nav__item--open{
+        display: flex;
+        justify-content: flex-end;
+
+        .c-main-nav__icon{
+            transform: rotate(0);
+        }
+    }
+}

@@ -1,0 +1,149 @@
+.section-offer{
+  background: #f6f7fb;
+
+  &__inner{
+    padding: 35px 30px 0;
+
+    @include max-w(768px){
+      max-width: 560px;
+      margin: 0 auto;
+    }
+
+    @include max-w(480px){
+      padding: 35px 15px 0;
+    }
+  }
+}
+
+.card-container{
+  display: flex;
+  flex-flow: wrap;
+  width: calc(100% + 30px);
+  margin: 32px 0 0 -15px;
+
+  @include max-w(1200px){
+    width: 100%;
+    margin: 32px 0 0;
+  }
+}
+
+.card{
+  position: relative;
+  background: $body-bg;
+  width: calc(100% / 3 - 30px);
+  margin: 0 15px 30px;
+
+  @include max-w(1200px){
+    width: 48.5%;
+    margin: 0 0 30px;
+
+    &:nth-child(odd){
+      margin-right: 3%;
+    }
+  }
+
+  @include max-w(768px){
+    width: 100%;
+    margin: 0 0 30px;
+
+    &:nth-child(odd){
+      margin-right: auto;
+    }
+  }
+
+  &__tape{
+    position: absolute;
+
+    top: 0;
+    left: 0;
+    margin: auto;
+    color: $text-color-light;
+    transform: translate(-20%, 60%) rotate(-45deg);
+
+    span{
+      position: relative;
+      z-index: 4;
+    }
+
+    &:before,
+    &:after{
+      content: '';
+    }
+
+    &:before{
+      background: linear-gradient(0, #a9d01f, #54b83c);
+      transform: translate(-50%, -50%) perspective(120px) rotateX(45deg);
+      width: 163%;
+      height: 206%;
+      display: block;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+    }
+
+    &:after{
+      position: absolute;
+      width: 0;
+      height: 0;
+      border-left: 4px solid transparent;
+      border-right: 8px solid transparent;
+      border-bottom: 10px solid #99cc24;
+      -webkit-transform: rotate(45deg);
+      transform: rotate(45deg);
+      top: 111.12%;
+      left: 126%;
+    }
+  }
+
+  //&__headline{}
+
+  //&__headline-title{}
+
+  //&__headline-sub-title{}
+
+  &__image-w{
+    flex: 0 0 69%;
+  }
+
+  &__image-wrap{
+    width: 100%;
+    overflow: hidden;
+    margin: 0;
+    position: relative;
+    padding-top: 56.25%;
+  }
+
+  &__image{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: auto;
+  }
+
+  &__info{
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__info-person{
+    background: #4990e2;
+    border-radius: 100px;
+    padding: 7px 32px;
+    color: $text-color-light;
+    display: inline-block;
+    font-size: .75rem;
+    letter-spacing: 0;
+  }
+
+  //&__list{}
+
+  //&__list-item{}
+
+  &__btn{
+    display: block;
+    margin: 21px auto 15px;
+  }
+}

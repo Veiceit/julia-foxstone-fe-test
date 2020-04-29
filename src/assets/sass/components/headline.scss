@@ -1,0 +1,40 @@
+.c-headline{
+    width: 100%;
+    padding: 20px 20px 10px;
+    border: 1px solid #e8e9ed;
+
+    &__inner{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        @include max-w(480px){
+            flex-direction: column;
+        }
+    }
+
+    &__title{
+        display: flex;
+        margin: 0;
+        font-size: 1.125rem;
+
+        @include max-w(480px){
+            margin-bottom: 25px;
+        }
+
+        &-icon{
+            width: 1em;
+
+            svg{
+                fill: #c3bfcd;
+            }
+        }
+
+        &-text{
+            color: #d3d7da;
+            font-weight: 100;
+            margin-left: 1em;
+        }
+    }
+}
